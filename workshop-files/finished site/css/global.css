@@ -1,0 +1,194 @@
+/* Place site styles below! 
+
+Happy Coding! */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Bree+Serif);
+
+body {
+  padding-top: 70px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bree Serif', serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fafafa;
+  border-bottom: 2px solid #A917BA;
+  height: 70px;
+  width: 100%;
+  font-weight: 700;
+}
+
+nav ul {
+  float: right;
+  width: auto;
+}
+
+nav li {
+  float: left;
+  width: auto;
+}
+
+nav li a {
+  padding: 27px 10px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s5
+}
+
+nav li a:hover {
+  background: #17BAA7;
+  color: #fff;
+}
+
+#brand {
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 5px;
+}
+
+#brand img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#hero {
+  background: url(../images/pano-nebula.jpg) no-repeat top left;
+  text-align: center;
+  color: #fafafa;
+  padding: 25px 0;
+  height: 350px;
+  background-size: cover;
+}
+
+#hero img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 30px;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+#hero img:hover {
+  opacity: .8;
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+#hero h2 {
+  font-size: 300%;
+  margin: 15px;
+}
+
+#hero .city {
+  border: 3px solid #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+#main-content {
+  padding: 25px 0;
+  overflow: hidden;
+}
+
+#main-content h3 {
+  font-size: 200%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 15px;
+  text-align: center;
+}
+
+.column img {
+  width: 90%;
+  max-width: 90%;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  box-shadow: 0 0px 10px 0px rgba(134, 0, 211, 1);
+}
+
+.column h4 {
+  color: #17BAA7;
+  font-size: 200%;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.column p {
+  font-size: 130%;
+  margin-bottom: 15px;
+}
+
+.column .btn {
+  background: #fff;
+  border: 3px solid #A917BA;
+  font-size: 120%;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -ms-transition: background .5s;
+  -o-transition: background .5s;
+  transition: background .5s;
+}
+
+.column .btn:hover {
+  background: #A917BA;
+  color: #fff;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -ms-transition: background .5s;
+  -o-transition: background .5s;
+  transition: background .5s;
+}
+
+footer {
+  font-size: 13px;
+  padding-left: 30px;
+}
+
+/* iPad */
+@media screen and (max-width: 1024px) {
+  body {
+    background: lime;
+  }
+  .container {width: 80%;}
+  .column {width: 25%;}
+}
+
+
+/* iphone */
+@media screen and (max-width: 480px) {
+  body {
+  background: magenta;
+  }
+}
+
+

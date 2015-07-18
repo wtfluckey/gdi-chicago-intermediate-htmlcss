@@ -51,9 +51,10 @@
                 <h2>Welcome!</h2>
                 <h4 class="blue">Wifi Info</h4>
                 <p>
-                    <strong>Network:</strong>SGGuest</p>
+                    <strong>Network: </strong>Dev Bootcamp</p>
                 <p>
-                    <strong>Password:</strong>GridSend0909</p>
+                    <strong>Password: </strong>igeekallweek</p>
+                <p>` <strong>Bathroom Code: </strong>513</p>
                 <br/>
                 <h3>Download workshop files</h3>
                 <p>Please download workshop files at: <a href="http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss/workshop-files.zip" target="blank">http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss</a>
@@ -61,11 +62,7 @@
             </section>
             <section>
                 <h2>Thanks to our sponsor:</h2>
-                <img src="images/sponsors/sendgrid.jpg" style="border:none; width: 400px;" alt="SendGrid" />
-            </section>
-            <section>
-                <h2>Thanks to our sponsor:</h2>
-                <img src="images/sponsors/hyperdog.png" style="border:none; width: 400px;" alt="Hyperdog Media" />
+                <img src="images/sponsors/dbc_bg.png" style="border:none; width: 400px;" alt="DevBootcamp" />
             </section>
             <section>
                 <h3>Class notes</h3>
@@ -89,25 +86,22 @@
                 </div>
             </section>
             <section class="hide-pdf">
-                <h3>About your instructor</h3>
+                <h4>About your instructor</h4>
                 <div class="left">
-                    <h4>Cara Jo Miller</h4>
+                    <h2>Aly Fluckey</h2>
                     <ul>
-                        <li>Moved to Colorado from Detroit, MI</li>
-                        <li>Lead Designer at Simple Energy</li>
-                        <li>Founding member of Girl Develop It Detroit</li>
-                        <li>Co-Founder of GDI Boulder</li>
-                        <li>Twitter: <a href="http://twitter.com/corrinajo">@corrinajo</a>
+                        <li>Roots in Des Moines, IA and Columbus, OH. Moved to Chicago in January.</li>
+                        <li>Works for 2Checkout as a Front End Developer</li>
+                        <li>Loves lava lamps and space</li>
+                        <li>Twitter: <a href="http://twitter.com/wtfluckey">@wtfluckey</a>
                         </li>
-                        <li>E-mail: <a href="mailto:carajo@girldevelopit.com">carajo@girldevelopit.com</a>
+                        <li>E-mail: <a href="mailto:fluckeya@gmail.com">fluckeya@gmail.com</a>
                         </li>
                     </ul>
                 </div>
             </section>
             <section>
                 <h3>Thank you to our Teaching Assistants today</h3>
-                <p>Valerie</p>
-                <p>Caitlin</p>
             </section>
             <section>
                 <h3>Now it's all about you!</h3>
@@ -123,7 +117,7 @@
             </section>
             <section>
                 <h3>We will be building a profile site from scratch</h3>
-                <img src="images/gdi-profile-layout.png" alt="today's project" />
+                <img src="images/finished-page.png" alt="today's project" />
             </section>
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">Workshop files</h1>
@@ -304,9 +298,11 @@
                     <li class="fragment">
                         <strong class="blue">Dec. 2010:</strong>Chrome opens HTML5 web store.</li>
                     <li class="fragment">
-                        <strong class="blue">Sept. 2011:</strong>34% of top 100 sites use HTML5</li>
+                        <strong class="blue">Sept. 2011:</strong>34% of top 100 sites use HTML5.</li>
                     <li class="fragment">
-                        <strong class="blue">Sept. 2012:</strong>WC3 proposes stable release of HTML5 by end of 2014!</li>
+                        <strong class="blue">Sept. 2012:</strong>WC3 proposes stable release of HTML5 by end of 2014.</li>
+                    <li class="fragment">
+                        <strong class="blue">Oct. 2014:</strong>HTML5 released! Plans for version 5.1 by 2016.</li>
                 </ul>
             </section>
             <!-- Browser compatibility-->
@@ -445,7 +441,8 @@
                 <h3>Let's Develop It</h3>
                 <ul>
                     <li>Use new HTML elements to layout the site</li>
-                    <li>Refer to the example design for hints.</li>
+                    <li>Add a header, some sections and a footer</li>
+                    <li>Refer to the example design for hints</li>
                 </ul>
             </section>
             <section data-background="#f05b62">
@@ -492,7 +489,7 @@ nav {
             <section>
                 <h3>Fixed Nav: CSS</h3>
                 <p>Because we've fixed the nav to the top of the viewport, we need to bump the content of the
-                    <code>body</code>down to be visible to the user.</p>
+                    <code>body </code>down to be visible to the user.</p>
                 <p>This should be the same, or more than, the height of the navigation bar.</p>
                 <pre><code class="css">
 body {
@@ -534,43 +531,41 @@ nav li a {
             </section>
             <section>
                 <h3>Fixed Nav: Adding a brand</h3>
-                <p>We can use an
-                    <code>H1</code>with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.</p>
+                <p>We are going to add a brand icon in the upper left of the nav. These are usually clickable, so I've wrapped mine in an achor tag.</p>
                 <pre><code class="xml">
-<header>
-    <nav>
-    <h1 id="brand">Cara Jo Miller</h1>
+    <header>
+      <nav>
+        <a href="" id="brand">
+          <img src="images/square-mason.jpg">
+        </a>
         <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">My Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <li>
+            <a href="">About</a>
+          </li>
+          ...
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 </code></pre>
             </section>
             <section>
-                <h3>Fixed Nav: Text replacement &amp; H1s</h3>
-                <pre><code class="css">#brand {
-    text-indent: -9000px;
-    background: url(../images/brand.png) no-repeat top left;
-    height: 60px;
-    width: 60px;
-    float: left;
-    margin: 5px;
-} 
+                <h3>Fixed Nav: Styling and floating</h3>
+                <pre><code class="css">
+#brand {
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 5px;
+}
+
+#brand img {
+  width: 100%;
+  border-radius: 50%;
+}
 nav ul {
     float: right;
     width: auto;
 }   </code></pre>
-            </section>
-            <section>
-                <h3>Why Text Replacement?</h3>
-                <ul>
-                    <li>If we turn the CSS off for this page - the title will still be visible to the browser.</li>
-                    <li>If a user is coming to our site with a screen reader - the title of the site will be readable to them</li>
-                    <li>Search engines &hearts; it!</li>
-                </ul>
             </section>
             <section>
                 <h3>Fixed Nav: Container</h3>
@@ -579,12 +574,14 @@ nav ul {
 <header>
     <nav>
         <div class="container">
-            <h1 id="brand">Cara Jo Miller</h1>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">My Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+          <a href="" id="brand">
+            <img src="images/square-mason.jpg">
+          </a>
+          <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="work.html">My Work</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
     </nav>
 </header>
@@ -598,7 +595,7 @@ nav ul {
     margin: 0 auto;
 }</code></pre>
                 <p>Now whereever we use
-                    <code>.container</code>it will be 1024px wide and centered.</p>
+                    <code>.container </code>it will be 1024px wide and centered.</p>
             </section>
             <section>
                 <h3>Develop It!</h3>
@@ -648,9 +645,9 @@ nav ul {
                 <p>Our Hero
                     <code>section</code>, should look a little something like this:</p>
                 <pre><code class="xml">&lt;section id="hero">
-    <img src="images/cojo.jpg" alt="Cara Jo Miller" />
-    <h2>Cara Jo Miller</h2>
-    <span class="city">Boulder, CO</span>
+    <img src="images/square-mason-light.jpg" alt="Mason gazing out the window, looking pretty" />
+    <h2>Mason the Pair Programming Cat</h2>
+    <span class="city">Chicago, IL</span>
 &lt;/section> </code></pre> 
             </section>
             <section>
@@ -683,7 +680,7 @@ nav ul {
                 <h3>Well, that was unexpected...</h3>
                 <p>Things that are wrong with this hero right now:
                     <ol>
-                        <li>That image of your face is way to big! And it's not even a circle!</li>
+                        <li>That image is way too big! And it's not even a circle!</li>
                         <li>The background image is way too large</li>
                         <li>The headline is really tiny</li>
                     </ol>
@@ -729,10 +726,6 @@ nav ul {
                 </section>
                 <section>
                     <h3>Border-radius</h3>
-                    <p>10px radius on top left</p>
-                    <p>20px radius top right</p>
-                    <p>40px radius bottom right</p>
-                    <p>80px radius bottom left</p>
                     <pre><code class="css">#hero img {
     border-radius: 10px 20px 40px 80px;
 }</code></pre>
@@ -790,6 +783,7 @@ nav ul {
                     <h3>NOTE:</h3>
                     <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.</p>
                     <p>This is to save time during the code exercises</p>
+                    <p>You can find examples of the prefixes in the finished css</p>
                 </section>
             </section>
             <section data-background="#f05b62">
@@ -810,7 +804,7 @@ nav ul {
 }
 </code></pre>
                 <p>
-                    <code>cover</code>scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
+                    <code>cover </code>scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
             </section>
 
             <section>
@@ -836,10 +830,10 @@ nav ul {
                 <pre><code class="xml">&lt;section id="main-content">
     <h3>...</h3>
     &lt;section class="column">
-        &lt;img src="images/photographer.jpg">
-        &lt;h4>The Photographer&lt;/h4>
-        &lt;p>I travel to some pretty awesome places...&lt;/p>
-        &lt;a href="photos.html" class="btn">See my photos&lt;/a>
+        &lt;img src="images/square-mason-upside-down.jpg">
+        &lt;h4>Belly rubs plz&lt;/h4>
+        &lt;p>Chase mice purr for no reason where is my slave? i'm getting hungry...&lt;/p>
+        &lt;a href="" class="btn">Rub my belly&lt;/a>
     &lt;/section>   
     &lt;!-- Repeat .column x3 -->
 &lt;/section> </code></pre> 
@@ -853,12 +847,12 @@ nav ul {
     width: 30%;
     padding: 15px;
 }        </code></pre>
-                <p>We used 30%, because it let's us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns so space.</p>
+                <p>We used 30%, because it let's us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns some space.</p>
             </section>
             <section>
                 <h3>Wow. Large Images.</h3>
                 <p>The images didn't scale with the columns, because they ignore constraints like
-                    <code>div</code>width, unless you tell it to do so.</p>
+                    <code>div </code>width, unless you tell it to do so.</p>
                 <pre><code class="css">.column img {
     width: 90%;
     max-width: 90%;
@@ -899,114 +893,6 @@ nav ul {
                         <li>Add a border to the images to make them stand out a bit more.</li>
                     </ul>
             </section>
-            <section>
-                <section data-background="#f05b62">
-                    <h1 style="color: #fafafa;">SVG Graphics</h1>
-                </section>
-                <section>
-                    <h2>SVG Graphics</h2>
-                    <p>Designers everywhere have always wanted to use vector based graphics on their sites because of their quality.</p>
-                    <p>Well now you can!</p>
-                </section>
-                <section>
-                    <h2>It's not that new really</h2>
-                    <p>It's been a W3C (World Wide Web Consortium) since 1999</p>
-                    <p>In recent years browsers are becoming more and more compatable with SVG graphics.</p>
-                    <p>Once upon a time, .png graphics weren't supported in browsers, soon the world will know about SVG!</p>
-                </section>
-                <section>
-                    <h2>How to use SVG today</h2>
-                    <p>Use Adobe Illustrator, or other vector program, to create a high quality image.</p>
-                    <p>Save it as a .svg file.</p>
-                    <p>Save a high res .png image as a fallback.</p>
-                </section>
-                <section>
-                    <h2>Include SVG</h2>
-                    <p>Use SVG as an image:</p>
-                    <pre><code>&lt;img src="image.svg" onerror="this.onerror=null; this.src='image.png'"></code></pre>
-                    <p>Use SVG as a background image:</p>
-                    <p class="blue">HTML:</p>
-                    <pre><code>&lt;a href="/" class="logo">
-  GDI
-&lt;/a></code></pre>
-                    <p class="blue">CSS:</p>
-                    <pre><code class="css">.logo {
-  display: block;
-  text-indent: -9999px;
-  width: 100px;
-  height: 82px;
-  background: url(kiwi.svg);
-  background-size: 100px 82px;
-}</code></pre>
-                </section>
-                <section>
-                    <h2>Browser Support</h2>
-                    <p>Our favorite topic - Internet explorer</p>
-                    <img src="images/svg-support.png" alt="SVG support" />
-                    <p>Chris Coyer has written an <a href="http://css-tricks.com/using-svg/">amazing article</a> on SVG and browser compatability with tons of work arounds for our BFF IE8.</p>
-                </section>
-            </section>
-            <section>
-                <h3>SVG Social Icons</h3>
-                <p>Now that we know how awesome SVG graphics are, let's use them in our social links section.</p>
-            </section>
-            <section>
-                <h3>Social Links: HTML</h3>
-                <pre><code class="html">&lt;section id="social">
-    &lt;ul>
-        &lt;li>
-            &lt;a href="..">
-                &lt;img src="images/facebook.svg" alt="Facebook" />
-            &lt;/a>
-        &lt;/li>
-        &lt;!-- Repeat for all social links you want to include -->
-    &lt;/ul>
-&lt;/section>
-</code></pre>
-                <p>We're using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.</p>
-            </section>
-            <section>
-                <h3>Social Links: CSS</h3>
-                <p>We'll need to add a background, some padding, account for the floated list items.</p>
-                <pre><code class="css">#social {
-    background: #57BEC5;
-    color: #fafafa;
-    padding: 25px 0;
-    overflow: hidden;
-}
-#social li {
-    float: left;
-    width: auto;
-    padding: 20px;
-}</code></pre> 
-            </section>
-            <section>
-                <h3>Centering the List</h3>
-                <p>First we should put our social links in a container! We'll also add in a headline.</p>
-                <pre><code class="xml">&lt;section id="social">
-    &lt;div class="container">
-        &lt;h3>...&lt;/h3>
-        &lt;ul>
-            ...
-        &lt;/ul>
-    &lt;/div>
-&lt;/section></code></pre>
-                <p>Next we'll center the
-                    <code>ul</code>with our magic auto margin.</p>
-                <pre><code class="css">#social ul {
-    width: 520px;
-    margin: 0 auto;
-}</code></pre>
-                <p>We'll need to give it a width, for the auto margin to work with. This may take some tinkering in the inspect element to get the right width.</p>
-            </section>
-            <section>
-                <h3>Develop It!</h3>
-                <ul>
-                    <li>Style the headline using the Descendant Selector.</li>
-                    <li>If you have Illustrator or another program to modify .svg graphics, change the colors to match your site.</li>
-                </ul>
-            </section>
-
 
             <section data-background="#f05b62">
                 <h1 style="color: #fafafa;">@font-face</h1>
@@ -1043,7 +929,7 @@ nav ul {
                 <ol>
                     <li>Search the hundreds of font families, then add them to your collection.</li>
                     <li>Compare and refine the collection - think about what styles you *NEED*</li>
-                    <li>Grab the code that Google prepares for you and add it to your site!</li>
+                    <li>Grab the code that Google prepares for you and add it to your css!</li>
                 </ol>
                 <pre><code class = "html">
   @import url(http://fonts.googleapis.com/
@@ -1067,8 +953,8 @@ h1, h2, h3, h4, h5, h6 {
                 <h3>Develop It!</h3>
                 <p>Pick some fonts for you site using Google Fonts</p>
                 <p>Adjust the
-                    <code>font-size</code>and
-                    <code>line-height</code>to refine your fonts.</p>
+                    <code>font-size </code>and
+                    <code>line-height </code>to refine your fonts.</p>
             </section>
             <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">rgba colors &amp; opacity</h2>
@@ -1869,7 +1755,7 @@ p {
         </div>
         <footer>
             <div class="copyright">
-                Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Boulder --
+                Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Chicago --
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
                     <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
                 </a>
